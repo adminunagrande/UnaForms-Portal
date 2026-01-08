@@ -4,36 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Портал заявок</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#f6f7f9; color:#111; }
-    .wrap { max-width: 760px; margin: 40px auto; padding: 0 16px; }
-    .card { background:#fff; border-radius: 14px; padding: 22px; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
-    h1 { font-size: 22px; margin: 0 0 10px; }
-    p { margin: 0 0 16px; color:#444; }
-    .btns { display: grid; gap: 12px; margin-top: 16px; }
-    a.btn {
-      display:block; text-decoration:none; text-align:center;
-      padding: 14px 16px; border-radius: 12px;
-      background:#2d6cdf; color:#fff; font-weight: 700;
+    * {
+      box-sizing: border-box;
     }
-    a.btn:hover { filter: brightness(0.95); }
-    .hint { margin-top: 14px; font-size: 13px; color:#666; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      color: #111;
+    }
+
+    /* Фоновая подложка (как в Яндекс Формах) */
+    .bg {
+      min-height: 100vh;
+      background:
+        linear-gradient(
+          rgba(20, 60, 50, 0.85),
+          rgba(20, 60, 50, 0.85)
+        ),
+        url("Desktop.jpg") center / cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* Ограничение ширины */
+    .wrap {
+      width: 100%;
+      max-width: 760px;
+    }
+
+    /* Карточка */
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 0 0 20px;
+      color: #444;
+    }
+
+    .btns {
+      display: grid;
+      gap: 14px;
+    }
+
+    .btn {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 16px;
+      border-radius: 14px;
+      background: #2d6cdf;
+      color: #fff;
+      font-weight: 700;
+      transition: transform .1s ease, filter .1s ease;
+    }
+
+    .btn:hover {
+      filter: brightness(0.95);
+      transform: translateY(-1px);
+    }
+
+    .hint {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #666;
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Выберите тип опроса</h1>
-      <p>Нажмите необходимую форму запроса — откроется соответствующая Яндекс Форма.</p>
+  <div class="bg">
+    <div class="wrap">
+      <div class="card">
 
-      <div class="btns">
-        <a class="btn" href="https://forms.yandex.ru/u/68fa789bf47e7362cac5fff2" target="_blank" rel="noopener">Нам важно услышать каждого</a>
-        <a class="btn" href="https://forms.yandex.ru/u/68fa618d49af476247749881" target="_blank" rel="noopener">Нам важна каждая идея!</a>
-        <!-- Добавляйте новые кнопки ниже -->
-        <!-- <a class="btn" href="https://forms.yandex.ru/..." target="_blank" rel="noopener">Новая форма</a> -->
+        <h1>Выберите тип опроса</h1>
+        <p>
+          Нажмите необходимую форму запроса — откроется соответствующая Яндекс Форма.
+        </p>
+
+        <div class="btns">
+          <a class="btn"
+             href="https://forms.yandex.ru/u/68fa789bf47e7362cac5fff2"
+             target="_blank" rel="noopener">
+            Нам важно услышать каждого
+          </a>
+
+          <a class="btn"
+             href="https://forms.yandex.ru/u/68fa618d49af476247749881"
+             target="_blank" rel="noopener">
+            Нам важна каждая идея!
+          </a>
+        </div>
+
+        <div class="hint">
+          Если формы не открываются — проверьте доступ к forms.yandex.ru из вашей сети.
+        </div>
+
       </div>
-
-      <div class="hint">Если формы не открываются — проверьте доступ к forms.yandex.ru из вашей сети.</div>
     </div>
   </div>
 </body>
