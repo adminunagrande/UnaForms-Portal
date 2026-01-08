@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портал заявок</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f6f7f9; color:#111; }
+    .wrap { max-width: 760px; margin: 40px auto; padding: 0 16px; }
+    .card { background:#fff; border-radius: 14px; padding: 22px; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+    h1 { font-size: 22px; margin: 0 0 10px; }
+    p { margin: 0 0 16px; color:#444; }
+    .btns { display: grid; gap: 12px; margin-top: 16px; }
+    a.btn {
+      display:block; text-decoration:none; text-align:center;
+      padding: 14px 16px; border-radius: 12px;
+      background:#2d6cdf; color:#fff; font-weight: 700;
+    }
+    a.btn:hover { filter: brightness(0.95); }
+    .hint { margin-top: 14px; font-size: 13px; color:#666; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Выберите тип заявки</h1>
+      <p>Нажмите кнопку — откроется соответствующая Яндекс Форма.</p>
+
+      <div class="btns">
+        <a class="btn" href="https://forms.yandex.ru/ВАША_ССЫЛКА_1" target="_blank" rel="noopener">Заявка: Вариант 1</a>
+        <a class="btn" href="https://forms.yandex.ru/ВАША_ССЫЛКА_2" target="_blank" rel="noopener">Заявка: Вариант 2</a>
+        <!-- Добавляйте новые кнопки ниже -->
+        <!-- <a class="btn" href="https://forms.yandex.ru/..." target="_blank" rel="noopener">Новая форма</a> -->
+      </div>
+
+      <div class="hint">Если формы не открываются — проверьте доступ к forms.yandex.ru из вашей сети.</div>
+    </div>
+  </div>
+</body>
+</html>
